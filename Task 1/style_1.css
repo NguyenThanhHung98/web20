@@ -1,0 +1,23 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+.menu{
+    background-color: #D5B0AC;
+    text-align: center;
+    height: 20px;
+}
+span{
+    color: #402E2A;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    padding: 3px 20px;
+}
+span:hover{
+    background-color: #9CD08F;
+    color: #FFFFFF;
+    cursor:pointer;
+}

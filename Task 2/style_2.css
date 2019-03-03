@@ -1,0 +1,25 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+.menu_vertical{
+    background-color: #D5B0AC;
+    text-align: center;
+    width: 100px;
+}
+span{
+    color: #402E2A;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    display: block;
+    padding-top: 10px;
+    border: 1px solid white;
+}
+span:hover{
+    color: #FFFFFF;
+    background-color: #9CD08F;
+    cursor: pointer;
+}

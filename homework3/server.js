@@ -16,7 +16,7 @@ for(let k=13;k<=20;k++){
     app.get(str,function(req,res){
         var li='';
         var data=fs.readFileSync(path.resolve(__dirname,str1));
-        var dataArray=JSON.parse(data);
+        var dataArray=JSON.parse(data); //convert string => array/object
         for(var i=0;i<dataArray.length;i++){
             li+="<li>"+dataArray[i]+"</li>"; 
         }
@@ -28,4 +28,8 @@ app.listen(6969, function(err){
     else console.log("server start success");
 })
 // http://localhost:6969
+
+// `data/${classanme}.json`  //dau huyen them string vao, co the xuong dong
+
+// kiem tra ton tai: fs.existsSync(...)
 

@@ -1,0 +1,43 @@
+.header {
+    background-color: #0000ff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12.75px;
+
+}
+
+.nav {
+    background-color: #800080;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12.75px;
+}
+
+.main {
+    background-color: #ffd700;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12.75px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: 1135px;
+}
+
+.aside {
+    background-color: #808080;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12.75px;
+    width: 385px;
+}
+
+.footer {
+    background-color: #00ffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12.75px;
+
+}
+.inline_flex{
+    display:inline-flex;
+}

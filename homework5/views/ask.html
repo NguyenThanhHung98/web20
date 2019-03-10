@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        #but_1{
+            margin-left: 100px;
+            background-color: red;
+        }
+        #but_2{
+            margin-left: 200px;
+            background-color: blue;
+        }
+        #but_3{
+            margin-left: 225px
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/ask">Hỏi nhanh</a>
+        <a href="/">Đáp gọn</a>
+    </nav>
+    <h1>Hãy hỏi cộng đồng một câu hỏi đúng/sai hoặc có/không</h1>
+    <form  method="POST" action="http://localhost:6969/addquestion">
+        <textarea name="question" id="questionInput" onkeyup="countChar(this)" cols="30" rows="10"></textarea>
+        <br>
+        <span id="remainChar">Còn 200/200 ký tự</span>
+        <br>
+        <button>Gửi</button>
+    </form>
+    <script>
+
+        // const questionInputElem = document.getElementById('questionInput');
+        // questionInputElem.addEventListener("keyup", () => {
+        //     const remainChar = 200 - questionInputElem.value.length;
+        //     document.getElementById('remainChar').innerText = "Còn "+remainChar+"/200 ký tự";
+        // })
+        
+        function countChar(val) {
+            var len = val.value.length;
+            if (len > 200) {
+            val.value = val.value.substring(0, 200);
+            } else {
+                document.getElementById('remainChar').innerText = "Còn "+(200-len)+"/200 ký tự";
+            }
+        };
+    </script>
+
+</body>
+</html>

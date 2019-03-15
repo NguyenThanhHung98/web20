@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quyết đê</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="/ask">Hỏi nhanh</a>
+        <a href="/">Đáp gọn</a>
+    </nav>
+    <h1 id="q1">Question</h1>
+    
+    <button id="no">Sai/Không/Trái</button>
+    <button id="yes">Đúng/Có/Phải</button>
+    <button id="vote">Kết quả vote</button>
+    <button >Câu hỏi khác</button>
+    <script>
+        let question;
+            $.ajax({
+            url: "/randomquestion",
+            success: result => {
+                $("#q1").html(result.content);
+                question = result;
+            }
+        })
+        $("#yes, #no, #vote").on("click", function() {
+            if (event.target.id === "yes") {
+                question.yes = parseInt(question.yes) + 1;
+            } else {
+                question.no = parseInt(question.no) + 1;
+            }
+            $.ajax({
+                url: '/questionvote',
+                type: 'PUT',
+                data: question,
+                success: data => {
+                    console.log(data);
+                }
+            })
+            let yes = (question.yes / (question.yes + question.no))*100;
+       	    $("#q1").append(`<h4>Yes: ${yes}%</h4>`,`<h4>No: ${100-yes}%</h4>`);
+            console.log(question);
+        })
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quyết đê</title>
+    <script
+		src="http://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <a href="/ask">Hỏi nhanh</a>
+        <a href="/">Đáp gọn</a>
+    </nav>
+    <h1>Question</h1>
+    <div>Tatal: <span id="total"></span></div>
+    <div>Votes yes: <span id="yes"></span></div>
+    <div>Votes no: <span id="no"></span></div>
+    <a href="#" id="but_1">
+        <button>Câu hỏi khác</button>
+    </a>
+    
+    <script>
+        const questionId = window.location.pathname.split('/')[2]; //lay ra gia tri id
+        $.ajax({
+            type: "GET",
+            url:`/detail/${questionId}`,
+            success: function(question){
+                // console.log(question.content);
+                $('h1').text(question.content);
+                const total = Number(question.yes + question.no);
+                $('#total').text(total);
+                $('#yes').text((total >0 ) ? (Number(question.yes)*100/total).toFixed(2) : 0); //if-else kieu ? :
+                $('#no').text((total >0 ) ? (Number(100-(question.yes)*100/total).toFixed(2)) : 0);
+                $('#but_1').attr("href", `/`);
+            }
+        });
+
+    </script>
+</body>
+</html>

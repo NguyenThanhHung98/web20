@@ -1,0 +1,19 @@
+#img_1{
+    width: 800px;
+    height: 400px;
+    padding-left: 180px;
+}
+#text_1{
+    width: 800px;
+    height: 30px;
+    
+}
+#button_1{
+    width: 100px;
+    height: 35px;
+    background-color: blue;
+}
+#div2{
+    width: 100px;
+    height: 100px;
+}

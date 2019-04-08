@@ -1,0 +1,20 @@
+- Images:
+    - link
+    - views
+    - postDate
+    - like
+    - description
+    - title
+    - author
+- Comments:
+    - imageId
+    - time
+    - userId
+    - content
+- Users:
+    - name
+    - dob
+    - password
+    - location
+    - gender
+    - account

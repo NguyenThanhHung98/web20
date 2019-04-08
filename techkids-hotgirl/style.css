@@ -1,0 +1,11 @@
+.top:hover{
+    opacity: 1;
+}
+
+.image:hover{
+    opacity: 0.5;
+}
+
+.d-inline-flex:hover{
+    opacity: 0;
+}

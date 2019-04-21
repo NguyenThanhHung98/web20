@@ -22,3 +22,19 @@
     top:229px;
     background-color: #B10202;
 }
+.number{
+    position: absolute;
+    width: 23px;
+    height: 24px;
+    left: 741px;
+    top: 217px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    
+    color:#000000;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Button from './Button';
-import Number from './Number'
+import './button.css'
 
 class App extends Component {
   constructor(props){
@@ -30,8 +30,8 @@ class App extends Component {
     // console.log(count)
     return (
       <div>
-        <button className="btn1" onClick={this.cong}><Button text="+" color="green" /></button>
-        <Number couter={num} />
+        <button onClick={this.cong}><Button text="+" color="green" /></button>
+        <p className="number">{num}</p>
         <button onClick={this.tru}><Button text="-" color="red" /></button>
       </div>
     );

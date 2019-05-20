@@ -7,7 +7,6 @@ class Child extends React.Component{
       <div>
         <p className={`text ${this.props.color}`}>Text</p>
       </div>
-      
     );
   }
 }
